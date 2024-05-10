@@ -7,7 +7,7 @@ public class MaterialColorSetter : MonoBehaviour
     [SerializeField] private Renderer _Renderer;
     public Color Color;
 
-    void Update()
+    void LateUpdate()
     {
         _Renderer.material.SetColor("_Color", Color);
     }
