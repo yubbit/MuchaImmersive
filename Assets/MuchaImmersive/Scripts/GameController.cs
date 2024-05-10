@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if (activatedCount == 4)
+        if (activatedCount == 4 || Input.GetKeyDown(KeyCode.Space))
         {
             foreach (WallController wallController in _wallControllers)
             {
