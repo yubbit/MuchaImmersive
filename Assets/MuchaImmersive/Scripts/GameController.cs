@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
             }
         }
 
-        if (activatedCount == 4)
+        if (activatedCount == 4 || Input.GetKeyDown(KeyCode.Space))
         {
             foreach (WallController wallController in _wallControllers)
             {
@@ -48,73 +48,4 @@ public class GameController : MonoBehaviour
             }
         }
     }
-
-    // void Update()
-    // {
-    //     // TODO: These conditionals will be replaced by proximity based logic
-    //     if (Input.GetKeyDown(KeyCode.Alpha1)) {
-    //         if (_currWall != 0)
-    //         {
-    //             if (_currWall != -1)
-    //                 _wallControllers[_currWall].LoadNextPainting();
-    //             // TODO: Pass the current painting's number to SetStateActive for specific interactions
-    //             _wallControllers[0].SetStateActive();
-    //             _currWall = 0;
-    //             _currState = State.Active;
-    //         }
-    //     }
-
-    //     if (Input.GetKeyDown(KeyCode.Alpha2)) {
-    //         if (_currWall != 1)
-    //         {
-    //             if (_currWall != -1)
-    //                 _wallControllers[_currWall].LoadNextPainting();
-    //             _wallControllers[1].SetStateActive();
-    //             _currWall = 1;
-    //             _currState = State.Active;
-    //         }
-    //     }
-
-    //     if (Input.GetKeyDown(KeyCode.Alpha3)) {
-    //         if (_currWall != 2)
-    //         {
-    //             if (_currWall != -1)
-    //                 _wallControllers[_currWall].LoadNextPainting();
-    //             _wallControllers[2].SetStateActive();
-    //             _currWall = 2;
-    //             _currState = State.Active;
-    //         }
-    //     }
-
-    //     if (Input.GetKeyDown(KeyCode.Alpha4)) {
-    //         if (_currWall != 3)
-    //         {
-    //             if (_currWall != -1)
-    //                 _wallControllers[_currWall].LoadNextPainting();
-    //             _wallControllers[3].SetStateActive();
-    //             _currWall = 3;
-    //             _currState = State.Active;
-    //         }
-    //     }
-    // }
-
-    // public void ResetState()
-    // {
-    //     _currWall = -1;
-    //     _currState = State.Idle;
-
-    //     foreach (WallController wallController in _wallControllers)
-    //     {
-    //         wallController.SetStateIdle();
-    //     }
-    // }
-
-    // public void LoadNextPainting()
-    // {
-    //     _wallControllers[_currWall].LoadNextPainting();
-    //     _currWall = (_currWall + 1) % _wallControllers.Length;
-    //     _wallControllers[_currWall].SetStateActive();
-    // }
-
-    // TODO: Create function to load specific painting given number
 }
